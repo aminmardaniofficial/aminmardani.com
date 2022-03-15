@@ -1,2 +1,610 @@
-Hello amin !
-background color:red;
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>باشگاه فرهنگی ورزشی هیرو</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="font/B Titr Bold_YasDL.com.ttf/css?family=btitr">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/song.css" />
+        <link rel="stylesheet" type="text/css" href="css/mos.css" />
+        <link rel="stylesheet" type="text/css" href="css/corsos.css" />
+        <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+        <link rel="icon" href="images/icone.png" type="icone" />
+        
+        <style>
+           * {box-sizing: border-box}
+            body{
+                background-color: rgba(255, 127, 80, 0.637);
+            }
+            .img {vertical-align: middle;}
+            .header{
+                background-color: rgba(255, 140, 0, 0.329);
+                
+            }
+            .slideshow-container{
+               
+              
+              max-width: 2000px;
+              position: relative;
+              margin: auto;
+            }
+
+            .mySlides {
+                 display: none
+            }
+
+            .prev, .next{
+                 cursor: pointer;
+                 position: absolute;
+                 top: 50%;
+                 width: auto;
+                 padding: 16px;
+                 margin-top: -22px;
+                 color: rgb(250, 232, 160);
+                 font-weight: bold;
+                 font-size: 18px;
+                 transition: 0.6s ease;
+                 border-radius: 0 5px 5px 0;
+                 user-select: none;
+            }
+
+            .next{
+                 right: 0;
+                 border-radius: 5px 0 0 5px;
+            }
+
+            .prev{
+                left: 0;
+            }
+            
+            .prev:hover, .next:hover{
+                 background-color: rgb(83, 75, 48);
+            }
+
+            .text {
+                 color: #fad46b;
+                 font-size: 25px;
+                 padding: 8px 12px;
+                 position: absolute;
+                 bottom: 8px;
+                 width: 100%;
+                 text-align: center;
+                 font-family: "btitr", serif;
+
+            }
+            .numbertext {
+                 color: #fad46b;
+                 font-size: 12px;
+                 padding: 8px 12px;
+                 position: absolute;
+                 top: 0;
+            }
+            
+            .dot {
+                 /*cursor: pointer;*/
+                 height: 15px;
+                 width: 15px;
+                 margin: 0 2px;
+                 background-color: rgb(116, 115, 113);
+                 border-radius: 50%;
+                 display: inline-block;
+                 transition: background-color 0.6s ease;
+                 background-image: url(images/icone2.png);
+            }
+            
+            .active, .dot:hover {
+                background-color: #f78437;
+            }
+            .fade {
+                 -webkit-animation-name: none;
+                 -webkit-animation-duration: 2s;
+                 animation-name: none;
+                 animation-duration: 2s;
+            }
+
+            @-webkit-keyframes fade {
+                 from {opacity: .4} 
+                 to {opacity: 1}
+            }
+
+            @keyframes fade {
+                 from {opacity: .4} 
+                 to {opacity: 1}
+            }
+            @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+            }
+
+
+            .navbar {
+                 overflow: hidden;
+                 background-color: rgba(51, 24, 47, 0.829);
+                 
+                 
+            }
+
+            .navbar a{
+                 float: right;
+                 display: block;
+                 color: white;
+                 text-align: center;
+                 padding: 14px 20px;
+                 text-decoration: none;
+
+            }
+
+            .navbar a:hover{
+                background-color: papayawhip;
+                color: red;
+            }
+
+            
+
+            #search{
+                
+                font-size: 18px;
+                padding: 10px;
+                border: 2px solid  darkgrey;
+                float: left;
+                border-radius: 4px;
+                
+            }
+
+            #search:hover{
+                border: 2px solid  rgb(235, 231, 8);
+                color: red
+
+            }
+
+            .asli{
+                width: 70%;
+                height: auto;
+                
+                
+
+               
+            }
+            .asli h1{
+                color: rgb(252, 252, 252);
+                text-align: right;
+                padding: 5px 10px;
+                
+
+            }
+
+            .menu {
+                 float: right;
+                 overflow: hidden;
+            }
+
+            .menu .menuclick {
+                 font-size: 16px;  
+                 border: none;
+                 outline: none;
+                 color: white;
+                 padding: 14px 16px;
+                 background-color: inherit;
+                 font: inherit;
+                 margin: 0;
+            }
+            .menu:hover .menuclick {
+                background-color: papayawhip;
+                color: red;
+            }
+
+
+
+            .column {
+             float: right;
+             width: 33.33%;
+             padding: 10px;
+             background-color: #ccc;
+             height: 250px;
+             text-align: right;
+             font-family: wolf;
+        }
+
+            .column a {
+                float:  none;
+                 color: black;
+                 padding: 16px;
+                 text-decoration: none;
+                 display: block;
+                 text-align: right;
+        }
+
+            .column a:hover {
+                 background-color: #ddd;
+        }
+
+            .row:after {
+             content: "";
+             display: table;
+             clear: both;
+             
+        }
+        .header{
+            text-align: right;
+            
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+             background-color: #f9f9f9;
+             width: 50%;
+             right: 0;
+             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+             z-index: 1;
+             text-align: right;
+        }
+
+        .dropdown-content .header {
+              background: papayawhip;
+             padding: 16px;
+             color: red;
+        }
+
+        .menu:hover .dropdown-content {
+             display: block;
+        }
+
+        .asli h1:hover{
+            color: red; 
+        }
+        #p1{
+            text-align: right;
+            font-size: 30px;
+            color: rgb(252, 252, 252);
+            font-style: bold;
+            padding: 2px 10px;
+        }
+        .fleft{
+            width: 30%;
+            height: auto;
+            background-color: rgba(51, 24, 47, 0.829);
+            float: right;
+            
+        }
+        #b1:hover{
+            color: rgb(252, 47, 11);
+
+        }
+
+
+
+
+
+
+
+
+        
+    
+
+
+        </style>
+
+    </head>
+    <body>
+      <div class="header" >
+
+        <div class="navbar">
+            <a href="index.html"><b> &#10070; صفحه اصلی</b></a>
+            <a href="pages/user.html"><b> &#9993; ورود کاربران</b></a>
+            <a href="pages/aboutus.html"><b> &#9997; درباره ما </b></a>
+            <a href="pages/contactus.html"><b> &#9990; تماس با ما</b></a>
+            <a href="pages/gallery.html"><b> &#10063; گالری</b></a>
+            <div class="menu">
+                <button class="menuclick"><b>منو</b>
+                    <i class="click"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="header">
+                        <h2>منو هیرو</h2>
+                      </div>
+                <div class="row">
+                <div class="column">
+                    <h3>سایت های ورزشی </h3>
+                    <a href="http://ebb1.ir/">هیئت بدنسازی اصفهان</a>
+                    <a href="http://www.iranbbf.ir/"> فدراسیون بدنسازی و پرورش اندام جمهوری اسلامی ایران</a>
+                </div>
+                <div class="column">
+                    <h3>تغذیه</h3>
+                
+                    <a href="https://www.digikala.com/search/category-sports_and_fitness_supplements/">مکمل ورزشی</a>
+                    <a href="https://darookhaneonline.com/">  داروخانه آنلاین </a>
+                </div>
+
+                <div class="column">
+                    <h3>مشاوره</h3>
+                
+                    <a href="https://drsamadpour.ir/%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87-%D8%AA%D8%BA%D8%B0%DB%8C%D9%87/">مشاوره تغذیه</a>
+                    <a href="#">مربی بدنسازی </a>
+                    
+                </div>
+                
+
+                
+            </div>
+            </div>
+            </div>
+            <input type="text" id="search" onkeyup="myFunction()"
+            placeholder="جستجو" title="جستجو در این سایت ">
+        </div>
+     <div class="slideshow-container">
+
+        <div class="mySlides fade">
+        <div class="numbertext"> 1 / 4 </div>
+        <img src="images/Untitled-1.jpg" style="width:100%">
+        <div class="text"><b>Hero Gym</b></div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"> 2 / 4 </div>
+            <img src="images/Untitled-2.jpg" style="width:100%">
+            <div class="text"><b>سالن بدنسازی بانوان</b> </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"> 3 / 4 </div>
+            <img src="images/Untitled-3.jpg" style="width:100%">
+            <div class="text"><b>دارای استخر و سونا و جکوزی</b></div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"> 4 / 4 </div>
+            <img src="images/Untitled-4.jpg" style="width:100%">
+            <div class="text"><b>سالن بدنسازی آقایان</b></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align: center;">
+         <span class="dot" onclick="currentSilde(1)"></span>
+         <span class="dot" onclick="currentSilde(2)"></span>
+         <span class="dot" onclick="currentSilde(3)"></span>
+         <span class="dot" onclick="currentSilde(4)"></span>
+    </div> 
+
+    <div class="mos">
+        
+        <div class="s2">
+            <a class="img1" href="#"><img class="i" src="icon mos/online-shopping-12551.png"  width="40px" height="40px" ></a>
+            <p class="s">آنلاین شاپ</p>
+        </div>
+        <div class="s3">
+            <a class="img1" href="#"><img class="i" src="icon mos/creadit-card-payment-12569.png" width="40px" height="40px" ></a>
+            <p class="s">برنامه تمرین </p>
+        </div>
+        <div class="s4">
+            <a class="img1" href="#"><img class="i" src="icon mos/percent-badge-12553.png" width="40px" height="40px" ></a>
+            <p class="s">تخفیف کده</p>
+        </div>
+        <h3> خدمات / کالا </h3>
+
+    </div>
+</br>
+
+      <div class="slider2">
+        
+        
+            <a target="_blank" href="gallery2/ali nemati.jpg">
+              <img src="gallery2/ali nemati.jpg" alt="Forest" width="100px" height="100px">
+            </a>
+            <div class="desc">مربی آقایان علی نعمتی</div>
+         
+
+      </div> 
+      <div class="slider2">
+        
+        
+        <a target="_blank" href="gallery2/shirin nobahari.jpg">
+          <img src="gallery2/shirin nobahari.jpg" alt="Forest" width="100px" height="100px">
+        </a>
+        <div class="desc">شیرین نوبهاری مربی بانوان</div>
+     
+
+        </div>
+         <div class="slider2">
+        
+        
+        <a target="_blank" href="gallery2/mr ompya zanan.jpg">
+          <img src="gallery2/mr ompya zanan.jpg" alt="Forest" width="100px" height="100px">
+        </a>
+        <div class="desc">مستر المپیا بانوان</div>
+     
+
+        </div> 
+    
+         <div class="slider2">
+        
+        
+        <a target="_blank" href="gallery2/estakhr.jpg">
+          <img src="gallery2/estakhr.jpg" alt="Forest" width="100px" height="100px">
+        </a>
+        <div class="desc">استخر سالن بدنسازی</div>
+     
+
+         </div>
+
+         <div class="slider2">
+        
+        
+            <a target="_blank" href="gallery2/2019-mr-olympia.jpg">
+              <img src="gallery2/2019-mr-olympia.jpg" alt="Forest" width="100px" height="100px">
+            </a>
+            <div class="desc">مستر المپیا آقایان</div>
+         
+
+        </div>
+        
+        <div class="slider2">
+        
+        
+            <a target="_blank" href="gallery2/olmpic.jpg">
+              <img src="gallery2/olmpic.jpg" alt="Forest" width="100px" height="100px">
+            </a>
+            <div class="desc">پارالمپیکی های هیرو</div>
+         
+
+    </div> 
+
+
+</br>
+    
+</br>
+        
+        <div class="fleft">
+              <div class="musicplayer">
+                  <header class="songcover">
+                      <img src="song/biography-aliyasini-32133.jpg" width="150px" height="150px">
+                  </header>
+                  <main class="songinfo">
+                      <h3 class="songname">Behtar az mane</h3>
+                      <p class="songsinger">Ali Yasini</p>
+                      <div class="progresscontainer">
+                          <div class="songprogress"></div>
+                      </div>
+                      <audio src="song/song.mp3" class="audio"></audio>
+                  </main>
+                  <footer class="songcontroller">
+                    <div class="buttoncontainer">
+                        <button class="prevsong controlbutton fal fa-step-backward">
+                        &#10094;
+                            
+                        </button>
+                        <button class="playsong controlbutton">
+                            
+                            <i class="fac fa-play playsongicon"></i>
+                            <div class="playsong_colored">
+                                
+                                <div class="playsong_wrapper">
+                                    <img id="p" src="song/play.png" width="30px" height="30px">
+                                </div>
+                            </div>
+                        </button>
+                        <button class="nextsong controlbutton fal fa-step-forward">
+                            &#10095;
+                            
+
+                            
+                            
+                        </button>
+                    </div>
+                    <div class="buttonscontainer">
+                        <button class="favsong controlbutton fal fa-heart">
+                            <img src="song/like.png" width="30px" height="30px">
+                        </button>
+                        <button class="listsong controlbutton fal fa-list-music">
+                            <img id="list" src="song/list.png" width="30px" height="30px">
+                            
+                        </button>
+                    </div>
+                  </footer>
+              </div>
+
+
+        </div>
+
+        <div class="asli">
+            <h1>باشگاه بدنسازی هیرو اصفهان</h1>
+            <br>
+            <p id="p1">باشگاه بدنسازی بانوان هیرو ، در سال <b id="b1">1363</b> با کسب مجوز رسمی از فدراسیون ورزش زیر نظر استاد اشرف وحیدیان در زمینه‌ی آموزش رشته‌های ورزشی به بانوان شروع به‌ فعالیت کرد که اخذ کردن مدرک کارشناسی ارشد تربیت بدنی از دانشگاه تهران و مربی سابق تیم ملی ایران از سوابق ایشان محسوب می شود؛ این موارد موجب شده که باشگاه بدنسازی هیرو یکی از بهترین باشگاه بدنسازی در اصفهان محسوب شود</p>
+            
+            
+            
+
+             
+        </div>
+
+        <div class="footer">
+
+            <div class="al">
+              <p class="ejtemai"> شبکه های اجتماعی </p>
+                <a href="https://wa.me/+989136408044" style="text-decoration: none;">
+                   <img src="images/whatsup.png"> 
+                </a>
+              
+                <a href="https://www.instagram.com/kara_marketingiran/"  style="text-decoration: none;">
+                    <img src="images/instagram.png"> 
+                 </a>
+
+                <a href="https://telegram.me/aminmardani_official"  style="text-decoration: none;">
+                    <img src="images/telegram.png"> 
+                </a>
+              
+              <a href="certificate/Opi tester certificate sample.jpg"  style="text-decoration: none;" target="_blank" >
+                <p class="certificate">Certification</p>
+            </a>
+
+            <a href="certificate/nemad.jpg"  style="text-decoration: none;" target="_blank" >
+                <p class="govahi">نماد الکترونیک</p>
+            </a>
+
+            <a href="certificate/nemad.jpg"  style="text-decoration: none;" target="_blank" >
+                <p class="and">لینک دانلود اندروید یا ای او اس </p>
+            </a>
+              
+            </div>
+            <div class="ad">
+                <p class="adres">آدرس : اصفهان ، سه راه سیمین ، ترمینال زاینده رود،باشگاه بدنسازی هیرو</p></br>
+
+                <p class="tel">شماره تماس : 09136408044</p></br>
+                <p class="lar"> ساعت کاری باشگاه : 8 تا 16 بانوان 16 تا 23 آقایان</p>
+
+            </div>
+            <div class="logo">
+                 <img src="images/icone.png" width="100px" height="100px">
+                 <div class="tozih">باشگاه بدنسازی هیرو با کمک مربیان حرفه ای خود قصد شرکت در مسابقات قهرمانی کشور و مسترالمپیا می باشد که امید است با کمک و همت و بردباری خود ورزشکاران به این نقطه صعود برسیم </div>
+            </div>
+            <hr>
+            <p class="copy">&copy;تمامی مطالب مطلق به امین مردانی می باشد </p>
+        </div>
+        <script src="js/song.js" type="text/javascript"></script>
+        <script src="js/container.js" type="text/javascript"></script>
+        <script>
+        var slideIndex = 1;
+             showSlides(slideIndex);
+
+        function plusSlides(n) {
+             showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+             showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}    
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+        }
+         for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+        }
+         slides[slideIndex-1].style.display = "block";  
+         dots[slideIndex-1].className += " active";
+        }
+
+
+            function myFunction(){
+                var input
+                input = document.getElementById("search")  
+            }
+
+            
+            
+        </script>
+    </body>
+</html>
